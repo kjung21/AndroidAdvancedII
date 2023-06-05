@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace "com.kryptopass.login"
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.kryptopass.login"
+        minSdkVersion 24
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        buildConfig true
+        dataBinding true
+        viewBinding true
+    }
+    dataBinding {
+        enabled = true
+        enabledForTests = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlin {
+        jvmToolchain(17)
+    }
+    testOptions.unitTests {
+        includeAndroidResources = true
+        returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+
+    implementation "androidx.activity:activity-ktx:$version_activity"
+    implementation "androidx.appcompat:appcompat:$version_appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+    implementation "androidx.core:core-ktx:$version_core"
+    implementation "androidx.fragment:fragment-ktx:$version_fragment"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
+    implementation "androidx.preference:preference-ktx:$version_preference"
+    implementation "androidx.work:work-runtime-ktx:$version_work"
+
+    implementation "com.firebaseui:firebase-ui-auth:$version_firebase_ui_auth"
+    implementation "com.google.firebase:firebase-auth-ktx:$version_google_firebase_auth"
+    implementation "com.google.android.material:material:$version_material"
+    implementation "com.jakewharton.timber:timber:$version_timber"
+    implementation "com.squareup.leakcanary:leakcanary-android:$version_leakcanary"
+
+    // NOTE: explicitly for androidTest source
+    androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$version_espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$version_espresso"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$version_mockito_dexmaker"
+    androidTestImplementation "org.mockito:mockito-core:$version_mockito"
+
+    // NOTE: used in both test and androidTest source
+    debugImplementation "androidx.fragment:fragment-testing:$version_fragment"
+    debugImplementation "androidx.test.ext:junit:$version_test"
+    debugImplementation "junit:junit:$version_junit"
+    debugImplementation "org.hamcrest:hamcrest:$version_hamcrest"
+    debugImplementation "org.hamcrest:hamcrest-library:$version_hamcrest"
+    debugImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version_coroutines"
+
+    // NOTE: explicitly for test source
+    testImplementation "androidx.arch.core:core-testing:$version_arch_testing"
+    testImplementation "androidx.test:core-ktx:$version_test_core"
+    testImplementation "org.robolectric:robolectric:$version_robolectric"
+}

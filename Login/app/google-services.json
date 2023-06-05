@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730811784559",
+    "project_id": "login-92c32",
+    "storage_bucket": "login-92c32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730811784559:android:44a25acfc6e7a401741c9a",
+        "android_client_info": {
+          "package_name": "com.kryptopass.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730811784559-vap04ageje9f7e99rhlm6vsboqi676hr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwO9klZy3P_zI5umJmCk7xc_p_dOfa8Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730811784559-vap04ageje9f7e99rhlm6vsboqi676hr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
