@@ -1,11 +1,14 @@
-# Android Kotlin Developer
+# Android Kotlin Developer Version 1.0 07/11/2023
 
-## Advanced Part II
+## Projects
 
 - Google Maps: cloud styling
 - Treasure Hunt: geofencing, broadcastreceiver
 - Testing Path: Espresso, Hamcrest, JUnit, Mockito, Robolectric
 - Login App: Firebase Auth
 
-## Google Play Store
+## Contact
 
+- Mobile: +1 214.478.3691
+- Web site: https://krypto-pass.com
+- Email: kjung5063@gmail.com
