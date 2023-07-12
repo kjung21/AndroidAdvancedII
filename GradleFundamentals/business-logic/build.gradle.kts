@@ -15,6 +15,14 @@ dependencies {
 
     // runtimeOnly("group:name")
     // compileOnly("group:name")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    // integrationTestImplementation("org.junit.jupiter:junit-jupiter-api")
+    // integrationTestRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    // integrationTestImplementation("...")
 }
 
 //configurations {

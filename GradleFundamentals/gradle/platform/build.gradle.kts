@@ -6,6 +6,7 @@ group = "com.kryptopass"
 
 javaPlatform.allowDependencies()
 dependencies {
+    api(platform("org.junit:junit-bom:5.8.2"))
     api(platform("com.fasterxml.jackson:jackson-bom:2.13.2"))
 }
 

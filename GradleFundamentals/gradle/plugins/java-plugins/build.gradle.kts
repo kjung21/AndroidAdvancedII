@@ -1,5 +1,23 @@
 plugins {
     `kotlin-dsl`
+
+    id("java-gradle-plugin")
+    id("groovy-gradle-plugin")
+}
+
+gradlePlugin {
+    plugins.create("MyJavaBase") {
+        id = "my-java-base"
+        implementationClass = "com.kryptopass.gradle.MyJavaBasePlugin"
+    }
+    plugins.create("MyJavaLibrary") {
+        id = "my-java-library"
+        implementationClass = "com.kryptopass.gradle.MyJavaLibraryPlugin"
+    }
+    plugins.create("MyJavaApplication") {
+        id = "my-java-application"
+        implementationClass = "com.kryptopass.gradle.MyJavaApplicationPlugin"
+    }
 }
 
 dependencies {
